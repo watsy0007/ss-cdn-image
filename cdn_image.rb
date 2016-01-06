@@ -19,18 +19,8 @@ uptoken = Qiniu::Auth.generate_uptoken(put_policy)
 puts uptoken
 
 Cuba.define do
-  on get do
-    on "hello" do
-      res.write "Hello world!"
-    end
-
-    on root do
-      res.redirect "/hello"
-    end
-  end
-
   on post do
-    on "image" do
+    on "/" do
       file = param('file').call
       puts file[0]
       open(file[0][:tempfile]) do |file|
