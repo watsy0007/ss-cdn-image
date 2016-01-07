@@ -28,5 +28,5 @@ AK=qiniu-ak SK=qiniu-sk rackup config.ru
 ## todo list
 
 - [ ] 验证图片
-- [ ] 环境配置
+- [x] 环境配置
 - [ ] docker配置与镜像
