@@ -13,11 +13,8 @@ Cuba.define do
   on get { on root { res.write 'hello' }}
   on post do
     on "image" do
-      puts '123123';
       file = param('file').call
-      puts file[0][:tempfile].size
-      code, result, response_headers = Qiniu::Storage.upload_with_put_policy(
-		put_policy,file[0][:tempfile])	
+      code, result, response_headers = Qiniu::Storage.upload_with_put_policy(put_policy,file[0][:tempfile])	
       res['Content-Type'] = 'application/json'
       res.write "{\"key\": \"#{result['key']}\"}"
     end

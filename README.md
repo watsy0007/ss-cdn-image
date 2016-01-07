@@ -17,7 +17,7 @@
 ### 2. 启动
 
 ```shell
-rackup config.ru
+AK=qiniu-ak SK=qiniu-sk rackup config.ru
 ```
 
 ### 3. 配置图床服务
