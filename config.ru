@@ -1,3 +1,2 @@
-require "./hello_world"
-
+require "./cdn_image"
 run Cuba
